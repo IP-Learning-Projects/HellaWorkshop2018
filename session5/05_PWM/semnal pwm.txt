@@ -1,0 +1,29 @@
+practic avem duty = factor de umplere ( adica dintr-o perioada de x secunde/timp cat % e high level)
+
+ca sa facem un semnal pwm , adica sa il simulam, el fiind un semnal semianalogic - adica e digital dar e simulat sa para analogic 
+noi luam in perioada x secunde un factor de umplere 
+sa zicem ca factorul de umplere e 50% 
+
+daca am avea high level la 5 volti 
+si low level la 0 volti 
+atunci noi am simula efectiv inputul de 2.5 volti 
+
+acum cum se deseneaza 
+
+practic 
+facem un grafic cu V pe oy si T(s) pe ox 
+si impartim in perioade 
+apoi in fiecare perioada facem procentul de umplere 
+adica perioada * factor de umplere 
+si da nr-ul de secunde / unitati de timp care vor fi consumate in high level
+
+astfel cu factorul de umplere de 50%
+intr-o perioada de 2 secunde 
+semnalul va sta la 5v timp de o secunda apoi va cobora la 0V timp de inca o secunda 
+si dupa ciclul se va repeta 
+
+semnalele au trigger limit , deci doar la rising edge o sa isi de trigger de pe o pozitie pe alta 
+( ca la semnalele analogice ) 
+
+deci daca avem rising edge dupa high level timp de o secunda 
+si dupa cade la 0V ( low level) si ramane asa , el va crede ca inca e la high level pana la urmatorul rising edge
